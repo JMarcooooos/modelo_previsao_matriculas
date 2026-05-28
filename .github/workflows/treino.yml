@@ -27,11 +27,11 @@ jobs:
         shell: Rscript {0}
 
       - name: Treinar Modelo
-        run: Rscript modelo.R
+        run: Rscript script.r
 
       - name: Fazer Upload do Modelo Final
         uses: actions/upload-artifact@v4
         with:
           name: golem-treinado-goias
-          path: fit_modelo_dinamico.rds
+          path: fit_modelo_evol.rds
           retention-days: 7
